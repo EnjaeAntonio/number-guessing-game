@@ -63,7 +63,7 @@ function select(selector, parent = document) {
         
         if (numberOfGuesses === -1) {
             output.innerText = 'Out of attempts play again!'
-            btn.disable = true;
+            select('.btn').disabled = true;
         }
 
  });
