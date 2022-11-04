@@ -51,7 +51,7 @@ function select(selector, parent = document) {
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
         else if (a == answer) {
-            output.innerText = `You got it!`
+            output.innerText = `You got it play again!`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
             select('.btn').disabled = true;
         }
