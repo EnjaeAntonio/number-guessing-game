@@ -46,7 +46,7 @@ function select(selector, parent = document) {
             output.innerText = `${a} is too low`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
-        else if (a > answer) {
+        else if (a > answer && a < 50) {
             output.innerText = `${a} is too high`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
