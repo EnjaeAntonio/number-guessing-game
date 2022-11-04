@@ -38,7 +38,7 @@ function select(selector, parent = document) {
   
     let a = number.value;
 
-        if (a <= 1 || a >= 11){
+        if (a <= 0 || a >= 11){
             output.innerText = `Read instructions. Click play again`;
         }
  
