@@ -28,7 +28,7 @@ function select(selector, parent = document) {
  const playAgain = select('.play-again')
  const attempts = select('.attempts')
  const number = select('.guess');
- let answer = [Math.floor(Math.random() * 10)];
+ let answer = Math.floor(Math.random() * 10) + 1;
  console.log(answer)
  let numberOfGuesses = 4;
  let guessNums = [];
@@ -38,11 +38,11 @@ function select(selector, parent = document) {
   
     let a = number.value;
 
-    if (a < 1 || a > 10){
-        output.innerText = `Enter a number between 1-10`;
-    }
+        if (a <= 1 || a >= 11){
+            output.innerText = `Enter a number between 1-10`;
+        }
  
-        if (a < answer) {
+         else if (a < answer) {
             output.innerText = `My number is higher guess again`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
