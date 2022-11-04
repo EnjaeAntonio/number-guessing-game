@@ -3,15 +3,15 @@
 :root {
     --app-dark-bg: #1a1d28;
     --app-red: #ff3c57;
-    --app-green: #129831;
+    --app-green: #006518;
     --app-purple: #833cff;
     --app-orange: #c26e3d;
-    --app-blue: #3c57ff;
-    --app-blue-hover: #364ee6;
+    --app-blue: #1131ff;
+    --app-blue-hover: #213efc;
 }
 
 body {
-    background-color: var(--app-purple);
+    background-color: rgb(63, 63, 230);
 }
 
 .container {
@@ -86,12 +86,12 @@ button {
     font-weight: 600;
     background-color: var(--app-green);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: all 0.25s ease-in-out;
 }
 
 button:hover {
-    background-color: #298782;
+    background-color: #0f736e;
 }
 
 input[type="text"] {
@@ -115,8 +115,7 @@ input[type="button"] {
     height: 46px;
     text-align: center;
     background-color: var(--app-blue);
-    border: 1px solid var(--app-blue);
-    border-radius: 4px;
+    border-radius: 50px;
     box-shadow: rgb(0 0 0 / 10%) 0px 26px 30px -10px, rgb(0 0 0 / 10%) 0px 16px 10px -10px;
     font-size: 16px;
     font-weight: 600;
