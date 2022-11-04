@@ -28,7 +28,7 @@ function select(selector, parent = document) {
  const playAgain = select('.play-again')
  const attempts = select('.attempts')
  const number = select('.guess');
- let answer = [Math.floor(Math.random() * 50)];
+ let answer = [Math.floor(Math.random() * 10)];
  console.log(answer)
  let numberOfGuesses = 4;
  let guessNums = [];
@@ -43,11 +43,11 @@ function select(selector, parent = document) {
     }
  
         if (a < answer) {
-            output.innerText = `My number is lower guess again`
+            output.innerText = `My number is higher guess again`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
-        else if (a > answer && a < 10) {
-            output.innerText = `My number is higher guess again`
+        else if (a > answer) {
+            output.innerText = `My number is lower guess again`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
         else if (a == answer) {
