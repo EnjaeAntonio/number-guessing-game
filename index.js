@@ -39,7 +39,7 @@ function select(selector, parent = document) {
     let a = number.value;
 
         if (a <= 1 || a >= 11){
-            output.innerText = `Enter a number between 1-10`;
+            output.innerText = `Read instructions. Click play again`;
         }
  
          else if (a < answer) {
