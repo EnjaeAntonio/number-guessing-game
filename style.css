@@ -6,12 +6,12 @@
     --app-green: #006518;
     --app-purple: #833cff;
     --app-orange: #c26e3d;
-    --app-blue: #1131ff;
-    --app-blue-hover: #213efc;
+    --app-blue: #1635ff;
+    --app-blue-hover: #0022ff;
 }
 
 body {
-    background-color: rgb(63, 63, 230);
+    background-color: rgb(17, 22, 95);
 }
 
 .container {
@@ -84,14 +84,14 @@ button {
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 600;
-    background-color: var(--app-green);
+    background-color: var(--app-orange);
     color: #fff;
     border-radius: 50px;
     transition: all 0.25s ease-in-out;
 }
 
 button:hover {
-    background-color: #0f736e;
+    background-color: #734b0f;
 }
 
 input[type="text"] {
@@ -115,6 +115,7 @@ input[type="button"] {
     height: 46px;
     text-align: center;
     background-color: var(--app-blue);
+    border: 2px solid #3582fd;
     border-radius: 50px;
     box-shadow: rgb(0 0 0 / 10%) 0px 26px 30px -10px, rgb(0 0 0 / 10%) 0px 16px 10px -10px;
     font-size: 16px;
