@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: var(--app-orange);
+    background-color: var(--app-purple);
 }
 
 .container {
@@ -74,10 +74,6 @@ header {
 .description {
     text-align: center;
     font-size: 26px;
-}
-
-span {
-    color: ;
 }
 
 button {

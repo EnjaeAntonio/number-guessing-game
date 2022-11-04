@@ -53,6 +53,7 @@ function select(selector, parent = document) {
         else if (a == answer) {
             output.innerText = `You got it!`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
+            select('.btn').disabled = true;
         }
         else if (isNaN(a)){
             output.innerText = `Enter a valid number`
@@ -62,7 +63,7 @@ function select(selector, parent = document) {
         numberOfGuesses-= 1;
         
         if (numberOfGuesses === -1) {
-            output.innerText = 'Out of attempts play again!'
+            output.innerText = `Out of attempts. ${answer} was the answer!`
             select('.btn').disabled = true;
         }
 
