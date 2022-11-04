@@ -118,7 +118,7 @@ input[type="button"] {
     width: 120px;
     height: 46px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--app-blue);
     border: 2px solid #3582fd;
     border-radius: 50px;
     box-shadow: rgb(0 0 0 / 10%) 0px 26px 30px -10px, rgb(0 0 0 / 10%) 0px 16px 10px -10px;
