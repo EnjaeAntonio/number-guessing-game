@@ -3,15 +3,15 @@
 :root {
     --app-dark-bg: #1a1d28;
     --app-red: #ff3c57;
-    --app-green: #33ab4e;
+    --app-green: #129831;
     --app-purple: #833cff;
-    --app-orange: #ff833c;
+    --app-orange: #c26e3d;
     --app-blue: #3c57ff;
     --app-blue-hover: #364ee6;
 }
 
 body {
-    background-color: var(--app-dark-bg);
+    background-color: var(--app-orange);
 }
 
 .container {
@@ -71,13 +71,27 @@ header {
     justify-content: center;
 }
 
+.description {
+    text-align: center;
+    font-size: 26px;
+}
+
+span {
+    color: ;
+}
+
 button {
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 600;
-    background-color: var(--app-purple);
+    background-color: var(--app-green);
     color: #fff;
     border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+    background-color: #298782;
 }
 
 input[type="text"] {

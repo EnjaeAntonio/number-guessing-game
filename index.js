@@ -30,7 +30,7 @@ function select(selector, parent = document) {
  const number = select('.guess');
  let answer = [Math.floor(Math.random() * 50)];
  console.log(answer)
- let numberOfGuesses = 1;
+ let numberOfGuesses = 4;
  let guessNums = [];
 
 
@@ -38,16 +38,16 @@ function select(selector, parent = document) {
   
     let a = number.value;
 
-    if (a < 1 || a > 50){
-        output.innerText = `Enter a number between 1-50`;
+    if (a < 1 || a > 10){
+        output.innerText = `Enter a number between 1-10`;
     }
  
         if (a < answer) {
-            output.innerText = `${a} is too low`
+            output.innerText = `My number is lower guess again`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
-        else if (a > answer && a < 50) {
-            output.innerText = `${a} is too high`
+        else if (a > answer && a < 10) {
+            output.innerText = `My number is higer guess again`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
         else if (a == answer) {
@@ -59,8 +59,12 @@ function select(selector, parent = document) {
         }
 
         guessNums.push(a);
-        numberOfGuesses+= 1;
-
+        numberOfGuesses-= 1;
+        
+        if (numberOfGuesses === -1) {
+            output.innerText = 'Out of attempts play again!'
+            btn.disable = true;
+        }
 
  });
 
