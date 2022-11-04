@@ -110,6 +110,10 @@ input[type="text"] {
     margin-top: 20px;
 }
 
+input[placeholder="Enter Number"] {
+    font-size: 45px;
+}
+
 input[type="button"] {
     width: 120px;
     height: 46px;
