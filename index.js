@@ -47,7 +47,7 @@ function select(selector, parent = document) {
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
         else if (a > answer && a < 10) {
-            output.innerText = `My number is higer guess again`
+            output.innerText = `My number is higher guess again`
             attempts.innerText = 'Attempts: ' + numberOfGuesses;
         }
         else if (a == answer) {
