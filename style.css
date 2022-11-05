@@ -15,6 +15,99 @@ body {
     background-color: rgb(0, 31, 92);
 }
 
+@keyframes body {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ---------------------------------------------------- */
+/* Header
+/* ---------------------------------------------------- */
+
+header {
+    padding: 12px;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.title {
+    width: 25%;
+}
+
+/* ---------------------------------------------------- */
+/* Play Again button
+/* ---------------------------------------------------- */
+    
+.btn-wrapper {
+    width: 75%;
+    text-align: right;
+}
+
+.button{
+    position: relative;
+    background-color: var(--app-orange);
+    border-radius: 4em;
+    font-size: 16px;
+    color: white;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  }
+  
+  .button:hover {
+    transition-duration: 0.5s;
+    background-color: #873c11;
+  }
+  
+  .button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 80px white;
+  }
+  
+  .button:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  .button:active {
+    top: 1px;
+  }
+  
+
+/* ---------------------------------------------------- */
+/* Win result page
+/* ---------------------------------------------------- */
+
 .win-result {
     position: fixed;
     top: 0;
@@ -33,13 +126,8 @@ body {
     animation: fadeIn 0.5s ease-in;
 }
 
-@keyframes body {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
+.result-btn {
+    text-align: center;
 }
 
 @keyframes fadeIn {
@@ -51,27 +139,15 @@ body {
      }
 }
 
-.container {
-    width: min(100% - 30px, 1080px);
-    margin-inline: auto;
-}
+/* ---------------------------------------------------- */
+/* Game section
+/* ---------------------------------------------------- */
 
-.flexbox {
-    display: flex;
-}
-
-.play-btn {
-    text-align: right;
-    width: 100%;
-}
-
-.game {
+form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
-
 
 h1, h2, h3, h4 {
     color: #fff;
@@ -97,59 +173,8 @@ p {
     font-size: 28px;
 }
 
-.result-btn {
-    text-align: center;
-}
-
-header {
-    padding: 12px;
-}
-
-.title {
-    width: 40%;
-}
-
-.btn-wrapper {
-    width: 60%;
-    text-align: right;
-}
-
-.guessnumber {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.description {
-    text-align: center;
-    font-size: 26px;
-}
-
-
-.description, .calc, .result, .give-up {
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: var(--app-orange);
-    color: #fff;
-    border-radius: 50px;
-    transition: all 0.25s ease-in-out;
-}
-
-.play-again-win {
-    margin-top: 10px;
-    padding: 10px 30px;
-}
-
-.calc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+input[type="button"] {
+    margin: auto;
 }
 
 input[type="text"] {
@@ -170,12 +195,30 @@ span {
     font-weight: 900;
 }
 
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.description {
+    text-align: center;
+    font-size: 26px;
+}
+
+
+.description, .calc, .result, .give-up {
+    margin-bottom: 20px;
+}
+
+
 .submit-btn {
     padding: 10px 30px;
     text-align: center;
     background-color: var(--app-blue);
     border: 2px solid #3582fd;
-    border-radius: 50px;
+    border-radius: 4em;
     box-shadow: rgb(0 0 0 / 10%) 0px 26px 30px -10px, rgb(0 0 0 / 10%) 0px 16px 10px -10px;
     font-size: 18px;
     font-weight: 600;
@@ -194,14 +237,10 @@ span {
     align-items: center;
 }
 
-input {
-    margin: 0 5px;
-}
-
 .give-up-btn {    
     padding: 10px 25px;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 4em;
     background-color: #ff0000;
     box-shadow: rgb(0 0 0 / 10%) 0px 26px 30px -10px, rgb(0 0 0 / 10%) 0px 16px 10px -10px;
     font-size: 18px;
@@ -216,6 +255,10 @@ input {
     background-color: #9b0000;
 }
 
+
+/* ---------------------------------------------------- */
+/* Output
+/* ---------------------------------------------------- */
 
 .output {
     padding: 10px;
@@ -233,4 +276,16 @@ input {
 
 .output p {
     font-size: 24px;
+}
+
+@media (max-width: 856px) {
+     h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 448px) {
+    h1 {
+       font-size: 21px;
+   }
 }

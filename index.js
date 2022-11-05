@@ -25,14 +25,14 @@ function select(selector, parent = document) {
 
  const btn = select('.submit-btn');
  const output = select('p');
- const playAgain = select('.play-again')
+ const playAgain = select('#play-again')
  const attempts = select('.attempts')
  const number = select('.guess');
  const giveUp = select('.give-up-btn')
  const winResult = select('.win-result')
  const winInfo = select('h4')
  const winPraise = select('.result-btn p')
- const winPlayAgain = select('.play-again-win')
+ const winPlayAgain = select('#play-again-win')
  let answer = Math.floor(Math.random() * 10) + 1;
  console.log(answer)
  let numberOfGuesses = 4;
