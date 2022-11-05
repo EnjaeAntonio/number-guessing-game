@@ -117,6 +117,8 @@ input[type="text"]:hover {
 
 span {
     color: var(--app-orange);
+    font-size: 26px;
+    font-weight: 900;
 }
 
 input[placeholder="Enter Number"] {
