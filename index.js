@@ -60,7 +60,7 @@ function select(selector, parent = document) {
             winResult.classList.toggle('win-result-page') 
             winPraise.innerText = `Nicely Done`
             winInfo.innerHTML = 'You had ' + '<span>' + numberOfGuesses + '</span>' + ' attempts remaining';
-            select('.btn').disabled = true;
+            btn.disabled = true;
         } 
        
         else if (isNaN(a)){
@@ -71,8 +71,8 @@ function select(selector, parent = document) {
         numberOfGuesses-= 1;
         
         if (numberOfGuesses === -1) {
-            output.innerHTML = `Out of attempts. ` + '<span>' + `${answer} ` + '</span>' + `is the answer`;
-            select('.btn').disabled = true;
+            output.innerHTML = `Your number was ` + '<span>' + `${answer} ` + '</span>' ;
+            btn.disabled = true;
         }
 
  });
