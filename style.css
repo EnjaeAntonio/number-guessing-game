@@ -111,10 +111,6 @@ input[type="text"] {
     font-weight: 600;
     color: #fff;
     text-align: center;
-    transition: all .25s ease-in-out;
-}
-
-input[type="text"]:hover {
 }
 
 span {

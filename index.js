@@ -40,21 +40,21 @@ function select(selector, parent = document) {
     let a = number.value;
         
         if (a <= 0 || a >= 11){
-            output.innerText = `Read instructions. Click play again`;
+            output.innerText = `Enter a number from 1-10`;
             select('.btn').disabled = true;
         }
  
          else if (a < answer) {
             output.innerText = `My number is higher guess again`
-            attempts.innerHTML = 'Attempts: ' + '<span>' + numberOfGuesses + '</span>';
+            attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
         }
         else if (a > answer) {
             output.innerText = `My number is lower guess again`
-            attempts.innerHTML = 'Attempts: ' + '<span>' + numberOfGuesses + '</span>';
+            attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
         }
         else if (a == answer) {
             output.innerText = `You got it play again!`
-            attempts.innerHTML = 'Attempts: ' + '<span>' + numberOfGuesses + '</span>';
+            attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
             select('.btn').disabled = true;
         }
         else if (isNaN(a)){
