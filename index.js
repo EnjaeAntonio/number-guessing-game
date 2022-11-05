@@ -23,11 +23,12 @@ function select(selector, parent = document) {
    console.log(content);
  }
 
- const btn = select('.btn');
+ const btn = select('.submit-btn');
  const output = select('p');
  const playAgain = select('.play-again')
  const attempts = select('.attempts')
  const number = select('.guess');
+ const giveUp = select('.give-up-btn')
  let answer = Math.floor(Math.random() * 10) + 1;
  console.log(answer)
  let numberOfGuesses = 4;
@@ -64,12 +65,29 @@ function select(selector, parent = document) {
         numberOfGuesses-= 1;
         
         if (numberOfGuesses === -1) {
-            output.innerText = `Out of attempts. ${answer} was the answer!`
+            output.innerHTML = `Out of attempts. ` + '<span>' + `${answer} ` + '</span>' + `is the answer`;
             select('.btn').disabled = true;
         }
 
  });
 
+
+// Play again function
 onEvent('click', playAgain, function() {
     document.location.reload(true)
+});
+
+// Give up function
+let chance = 3; 
+
+onEvent('click', giveUp, function() {
+    chance-= 1;
+    if(chance === 2){
+        output.innerHTML =  'Are you sure?'
+    }
+    else if (chance === 1){
+        output.innerHTML =  'Are you 100% sure?'; 
+    } 
+    else if (chance === 0)
+    output.innerHTML =  '<span>' + `${answer} ` + '</span>' + `is the answer`; 
 })
