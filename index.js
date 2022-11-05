@@ -29,6 +29,10 @@ function select(selector, parent = document) {
  const attempts = select('.attempts')
  const number = select('.guess');
  const giveUp = select('.give-up-btn')
+ const winResult = select('.win-result')
+ const winInfo = select('h4')
+ const winPraise = select('.result-btn p')
+ const winPlayAgain = select('.play-again-win')
  let answer = Math.floor(Math.random() * 10) + 1;
  console.log(answer)
  let numberOfGuesses = 4;
@@ -36,7 +40,7 @@ function select(selector, parent = document) {
 
 
  onEvent('click', btn, function() {
-  
+
     let a = number.value;
         
         if (a <= 0 || a >= 11){
@@ -45,18 +49,20 @@ function select(selector, parent = document) {
         }
  
          else if (a < answer) {
-            output.innerText = `My number is higher guess again`
+            output.innerText = `Your guess is too low`
             attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
         }
         else if (a > answer) {
-            output.innerText = `My number is lower guess again`
+            output.innerText = `Your guess is too high`
             attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
         }
         else if (a == answer) {
-            output.innerText = `You got it play again!`
-            attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
+            winResult.classList.toggle('win-result-page') 
+            winPraise.innerText = `Nicely Done`
+            winInfo.innerHTML = 'You had ' + '<span>' + numberOfGuesses + '</span>' + ' attempts remaining';
             select('.btn').disabled = true;
-        }
+        } 
+       
         else if (isNaN(a)){
             output.innerText = `Enter a valid number`
         }
@@ -74,6 +80,10 @@ function select(selector, parent = document) {
 
 // Play again function
 onEvent('click', playAgain, function() {
+    document.location.reload(true)
+});
+
+onEvent('click', winPlayAgain, function() {
     document.location.reload(true)
 });
 
