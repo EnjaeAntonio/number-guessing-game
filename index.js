@@ -37,22 +37,23 @@ function select(selector, parent = document) {
  onEvent('click', btn, function() {
   
     let a = number.value;
-
+        
         if (a <= 0 || a >= 11){
             output.innerText = `Read instructions. Click play again`;
+            select('.btn').disabled = true;
         }
  
          else if (a < answer) {
             output.innerText = `My number is higher guess again`
-            attempts.innerText = 'Attempts: ' + numberOfGuesses;
+            attempts.innerHTML = 'Attempts: ' + '<span>' + numberOfGuesses + '</span>';
         }
         else if (a > answer) {
             output.innerText = `My number is lower guess again`
-            attempts.innerText = 'Attempts: ' + numberOfGuesses;
+            attempts.innerHTML = 'Attempts: ' + '<span>' + numberOfGuesses + '</span>';
         }
         else if (a == answer) {
             output.innerText = `You got it play again!`
-            attempts.innerText = 'Attempts: ' + numberOfGuesses;
+            attempts.innerHTML = 'Attempts: ' + '<span>' + numberOfGuesses + '</span>';
             select('.btn').disabled = true;
         }
         else if (isNaN(a)){
