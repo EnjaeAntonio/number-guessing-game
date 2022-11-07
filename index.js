@@ -47,7 +47,6 @@ function select(selector, parent = document) {
             output.innerText = `Enter a number from 1-10`;
             select('.btn').disabled = true;
         }
- 
          else if (a < answer) {
             output.innerText = `Your guess is too low`
             attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
