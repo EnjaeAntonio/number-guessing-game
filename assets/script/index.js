@@ -97,6 +97,6 @@ onEvent('click', giveUp, function() {
     else if (chance === 1){
         output.innerHTML =  'Are you 100% sure?'; 
     } 
-    else if (chance === 0)
+    else 
     output.innerHTML =  '<span>' + `${answer} ` + '</span>' + `is the answer`; 
 })
