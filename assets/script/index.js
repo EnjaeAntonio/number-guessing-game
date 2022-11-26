@@ -23,6 +23,10 @@ function select(selector, parent = document) {
    console.log(content);
  }
 
+ /*****************************************
+        Variables
+*****************************************/
+
  const btn = select('.submit-btn');
  const output = select('p');
  const playAgain = select('#play-again')
@@ -39,6 +43,9 @@ function select(selector, parent = document) {
  let guessNums = [];
 
 
+ /*****************************************
+        onEvent button
+*****************************************/
  onEvent('click', btn, function() {
 
     let a = number.value;
@@ -55,16 +62,16 @@ function select(selector, parent = document) {
             output.innerText = `Your guess is too high`
             attempts.innerHTML = 'Attempts remaining: ' + '<span>' + numberOfGuesses + '</span>';
         }
+        
+        else if (isNaN(a)){
+            output.innerText = `Enter a valid number`
+        }
         else if (a == answer) {
             winResult.classList.toggle('win-result-page') 
             winPraise.innerText = `Nicely Done`
             winInfo.innerHTML = 'You had ' + '<span>' + numberOfGuesses + '</span>' + ' attempts remaining';
             btn.disabled = true;
         } 
-       
-        else if (isNaN(a)){
-            output.innerText = `Enter a valid number`
-        }
 
         guessNums.push(a);
         numberOfGuesses-= 1;
@@ -77,16 +84,24 @@ function select(selector, parent = document) {
  });
 
 
-// Play again function
+/*****************************************
+        Play again function
+*****************************************/
 onEvent('click', playAgain, function() {
     document.location.reload(true)
 });
 
+
+/*****************************************
+        Win again page
+*****************************************/
 onEvent('click', winPlayAgain, function() {
     document.location.reload(true)
 });
 
-// Give up function
+/*****************************************
+        Give up function
+*****************************************/
 let chance = 3; 
 
 onEvent('click', giveUp, function() {
